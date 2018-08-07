@@ -18,11 +18,11 @@
     "module": "es2015",
     "baseUrl": "./",
     "paths": {
-      "example-ng6-lib": [
-        "dist/example-ng6-lib"
+      "ama-lib": [
+        "dist/ama-lib"
       ],
-      "example-ng6-lib/*": [
-        "dist/example-ng6-lib/*"
+      "ama-lib/*": [
+        "dist/ama-lib/*"
       ]
     }
   }

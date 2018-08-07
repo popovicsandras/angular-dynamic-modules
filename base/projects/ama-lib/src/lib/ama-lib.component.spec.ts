@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExampleNg6LibComponent } from './example-ng6-lib.component';
+import { AmaLibComponent } from './ama-lib.component';
 
-describe('ExampleNg6LibComponent', () => {
-  let component: ExampleNg6LibComponent;
-  let fixture: ComponentFixture<ExampleNg6LibComponent>;
+describe('AmaLibComponent', () => {
+  let component: AmaLibComponent;
+  let fixture: ComponentFixture<AmaLibComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExampleNg6LibComponent ]
+      declarations: [ AmaLibComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExampleNg6LibComponent);
+    fixture = TestBed.createComponent(AmaLibComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

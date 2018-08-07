@@ -118,38 +118,38 @@
         }
       }
     },
-    "example-ng6-lib": {
-      "root": "projects/example-ng6-lib",
-      "sourceRoot": "projects/example-ng6-lib/src",
+    "ama-lib": {
+      "root": "projects/ama-lib",
+      "sourceRoot": "projects/ama-lib/src",
       "projectType": "library",
-      "prefix": "enl",
+      "prefix": "ama",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/example-ng6-lib/tsconfig.lib.json",
-            "project": "projects/example-ng6-lib/ng-package.json"
+            "tsConfig": "projects/ama-lib/tsconfig.lib.json",
+            "project": "projects/ama-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "projects/example-ng6-lib/ng-package.prod.json"
+              "project": "projects/ama-lib/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/example-ng6-lib/src/test.ts",
-            "tsConfig": "projects/example-ng6-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/example-ng6-lib/karma.conf.js"
+            "main": "projects/ama-lib/src/test.ts",
+            "tsConfig": "projects/ama-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ama-lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/example-ng6-lib/tsconfig.lib.json",
-              "projects/example-ng6-lib/tsconfig.spec.json"
+              "projects/ama-lib/tsconfig.lib.json",
+              "projects/ama-lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

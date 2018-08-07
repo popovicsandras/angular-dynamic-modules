@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'enl-example-ng6-lib',
+  selector: 'ama-ama-lib',
   template: `
     <p>
-      example-ng6-lib works!
+      ama-lib works!
     </p>
   `,
   styles: []
 })
-export class ExampleNg6LibComponent implements OnInit {
+export class AmaLibComponent implements OnInit {
 
   constructor() { }
 
