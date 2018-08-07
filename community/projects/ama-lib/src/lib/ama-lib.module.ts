@@ -9,7 +9,15 @@ import { JsonEditorComponent } from './components/json-editor/json-editor.compon
   imports: [
     BrowserModule
   ],
-  declarations: [AppLayoutComponent, InAppPageComponent, ConnectorEditorComponent, JsonEditorComponent],
-  exports: [AppLayoutComponent]
+  declarations: [
+    AppLayoutComponent,
+    InAppPageComponent,
+    ConnectorEditorComponent,
+    JsonEditorComponent
+  ],
+  exports: [
+    BrowserModule,
+    AppLayoutComponent
+  ]
 })
 export class AmaLibModule { }
