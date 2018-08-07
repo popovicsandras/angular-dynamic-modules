@@ -3,5 +3,5 @@
  */
 
 export * from './lib/ama-lib.service';
-export * from './lib/ama-lib.component';
+export * from './lib/components/app-layout/app-layout.component';
 export * from './lib/ama-lib.module';

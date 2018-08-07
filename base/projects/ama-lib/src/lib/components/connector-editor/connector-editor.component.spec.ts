@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StaticInnerComponent } from './static-inner.component';
+import { ConnectorEditorComponent } from './connector-editor.component';
 
-describe('StaticInnerComponent', () => {
-  let component: StaticInnerComponent;
-  let fixture: ComponentFixture<StaticInnerComponent>;
+describe('ConnectorEditorComponent', () => {
+  let component: ConnectorEditorComponent;
+  let fixture: ComponentFixture<ConnectorEditorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StaticInnerComponent ]
+      declarations: [ ConnectorEditorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StaticInnerComponent);
+    fixture = TestBed.createComponent(ConnectorEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

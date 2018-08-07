@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StaticInnerInnerComponent } from './static-inner-inner.component';
+import { AppLayoutComponent } from './app-layout.component';
 
-describe('StaticInnerInnerComponent', () => {
-  let component: StaticInnerInnerComponent;
-  let fixture: ComponentFixture<StaticInnerInnerComponent>;
+describe('AppLayoutComponent', () => {
+  let component: AppLayoutComponent;
+  let fixture: ComponentFixture<AppLayoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StaticInnerInnerComponent ]
+      declarations: [ AppLayoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StaticInnerInnerComponent);
+    fixture = TestBed.createComponent(AppLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
