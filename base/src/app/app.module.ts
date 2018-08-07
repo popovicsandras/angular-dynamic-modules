@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
-import { AmaLibModule } from 'ama-lib';
-import { AppComponent } from './app.component';
+import { AmaLibModule, AppLayoutComponent } from 'ama-lib';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [],
   imports: [
     AmaLibModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppLayoutComponent]
 })
 export class AppModule { }
