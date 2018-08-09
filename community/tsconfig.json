@@ -19,10 +19,10 @@
     "baseUrl": "./",
     "paths": {
       "ama-lib": [
-        "dist/ama-lib"
+        "projects/ama-lib"
       ],
       "ama-lib/*": [
-        "dist/ama-lib/*"
+        "projects/ama-lib/*"
       ]
     }
   }

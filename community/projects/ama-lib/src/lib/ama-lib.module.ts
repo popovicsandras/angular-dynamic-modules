@@ -1,19 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppLayoutComponent } from './components/app-layout/app-layout.component';
-import { InAppPageComponent } from './components/in-app-page/in-app-page.component';
-import { ConnectorEditorComponent } from './components/connector-editor/connector-editor.component';
-import { JsonEditorComponent } from './components/json-editor/json-editor.component';
+import { AppLayoutComponent } from './common/app-layout/app-layout.component';
+import { InAppPageComponent } from './common/in-app-page/in-app-page.component';
+import { ConnectorEditorModule } from './connector-editor/connector-editor.module';
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    ConnectorEditorModule
   ],
   declarations: [
     AppLayoutComponent,
-    InAppPageComponent,
-    ConnectorEditorComponent,
-    JsonEditorComponent
+    InAppPageComponent
   ],
   exports: [
     BrowserModule,
