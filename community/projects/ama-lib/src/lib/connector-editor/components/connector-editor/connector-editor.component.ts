@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CONNECTOR_EDITOR_UI } from 'ama-lib/src/lib/extension.tokens';
+import { CONNECTOR_EDITOR_UI } from '../../../extension.tokens';
 
 @Component({
   selector: 'app-connector-editor',
