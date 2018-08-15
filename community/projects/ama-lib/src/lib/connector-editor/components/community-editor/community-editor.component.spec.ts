@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConnectorEditorComponent } from './connector-editor.component';
+import { CommunityEditorComponent } from './community-editor.component';
 
-describe('ConnectorEditorComponent', () => {
-  let component: ConnectorEditorComponent;
-  let fixture: ComponentFixture<ConnectorEditorComponent>;
+describe('CommunityEditorComponent', () => {
+  let component: CommunityEditorComponent;
+  let fixture: ComponentFixture<CommunityEditorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConnectorEditorComponent ]
+      declarations: [ CommunityEditorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ConnectorEditorComponent);
+    fixture = TestBed.createComponent(CommunityEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

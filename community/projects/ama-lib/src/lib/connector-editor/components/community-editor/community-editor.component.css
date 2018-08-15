@@ -1,6 +1,7 @@
 :host {
   border: 1px solid #000;
-  background: red;
+  background: purple;
   padding: 10px;
   display: block;
+  color: white;
 }
