@@ -10,8 +10,6 @@ import {
   InjectionToken,
   Injector
 } from '@angular/core';
-import { Type } from '@angular/compiler';
-
 @Component({
   selector: 'ama-extension',
   template: `<div #content></div>`

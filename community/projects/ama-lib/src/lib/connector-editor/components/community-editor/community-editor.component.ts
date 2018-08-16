@@ -1,14 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './community-editor.component.html',
-  styleUrls: ['./community-editor.component.css']
+  template: `<p>Dinamically loaded community-editor works!</p> <app-json-editor></app-json-editor>`,
+  styles: [
+    `
+      :host {
+        border: 1px solid #000;
+        background: purple;
+        padding: 10px;
+        display: block;
+        color: white;
+      }
+    `
+  ]
 })
-export class CommunityEditorComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class CommunityEditorComponent {}

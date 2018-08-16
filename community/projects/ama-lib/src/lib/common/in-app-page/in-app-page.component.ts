@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-in-app-page',
-  templateUrl: './in-app-page.component.html',
-  styleUrls: ['./in-app-page.component.css']
+  template: `<p>in-app-page works!</p> <app-connector-editor></app-connector-editor>`,
+  styles: [
+    `
+      :host {
+        border: 1px solid #000;
+        background: red;
+        color: white;
+        padding: 10px;
+        display: block;
+      }
+    `
+  ]
 })
-export class InAppPageComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class InAppPageComponent {}
