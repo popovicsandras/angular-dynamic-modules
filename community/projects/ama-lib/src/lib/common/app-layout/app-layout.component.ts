@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app-layout.component.html',
-  styleUrls: ['./app-layout.component.css']
+  template: `<p>app-layout works!</p> <app-in-app-page></app-in-app-page>`,
+  styles: [
+    `
+      :host {
+        background: yellow;
+        border: 1px solid #000;
+        padding: 10px;
+        display: block;
+      }
+    `
+  ]
 })
-export class AppLayoutComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class AppLayoutComponent {}
