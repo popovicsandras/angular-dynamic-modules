@@ -22,6 +22,11 @@ Thus the base (Community) application itself only contains one module which wire
 
 The enterprise folder uses the AMA application library the same way as the Community, with other extensions. The rewire happens through the DI of Angular.
 
+#### Build the lazy loaded extension
+
+`npm run package`
+
+
 #### Run the Enterprise application
 
 `npm start`
