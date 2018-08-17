@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { AmaLibService } from '../../../ama-lib.service';
 
 @Component({
-  template: `<p>Dinamically loaded community-editor works!</p> <app-json-editor></app-json-editor>`,
+  template: `
+    <p>Dinamically loaded community-editor works with service: {{ message }}!</p>
+    <app-json-editor></app-json-editor>`,
   styles: [
     `
       :host {
@@ -14,4 +17,10 @@ import { Component } from '@angular/core';
     `
   ]
 })
-export class CommunityEditorComponent {}
+export class CommunityEditorComponent {
+  message: string;
+
+  constructor(amaLibService: AmaLibService) {
+    this.message = amaLibService.getValue();
+  }
+}

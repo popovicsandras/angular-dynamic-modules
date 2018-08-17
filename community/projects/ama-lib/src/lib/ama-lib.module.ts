@@ -4,6 +4,7 @@ import { AppLayoutComponent } from './common/app-layout/app-layout.component';
 import { InAppPageComponent } from './common/in-app-page/in-app-page.component';
 import { ConnectorEditorModule } from './connector-editor/connector-editor.module';
 import { ExtensionFactoryService } from './common/extension/extension-factory.service';
+import { AmaLibService } from './ama-lib.service';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { ExtensionFactoryService } from './common/extension/extension-factory.se
     AppLayoutComponent
   ],
   providers: [
+    AmaLibService,
     ExtensionFactoryService
   ]
 })

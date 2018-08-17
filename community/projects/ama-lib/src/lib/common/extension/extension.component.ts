@@ -8,7 +8,8 @@ import {
     OnDestroy,
     InjectionToken,
     Injector,
-    Type
+    Type,
+    NgModuleRef
 } from '@angular/core';
 import { ExtensionFactoryService } from './extension-factory.service';
 
@@ -27,12 +28,17 @@ export class ExtensionComponent implements OnInit, OnDestroy {
 
     constructor(
         private extensionFactoryService: ExtensionFactoryService,
-        private injector: Injector) { }
+        private injector: Injector,
+        private ngModule: NgModuleRef<any>) { }
 
     ngOnInit() {
+      /*tslint:disable-next-line*/
+      console.log('module: ', this.ngModule);
+      /*tslint:disable-next-line*/
+      console.log('equals: ', this.injector === this.ngModule.injector);
         const extension = this.injector.get<string | Type<{}>>(this.token);
         if (extension) {
-            const factory$ = this.extensionFactoryService.loadFactory(extension, this.injector);
+            const factory$ = this.extensionFactoryService.loadFactory(extension, this.ngModule.injector);
 
             factory$.subscribe((factory) => {
                 this.content.clear();

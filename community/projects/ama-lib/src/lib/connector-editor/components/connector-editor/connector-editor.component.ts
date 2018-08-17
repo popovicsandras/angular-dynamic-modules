@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { CONNECTOR_EDITOR_UI } from '../../../extension.tokens';
+import { AmaLibService } from '../../../ama-lib.service';
 
 @Component({
   selector: 'app-connector-editor',
-  template: `<p>connector-editor works!</p> <ama-extension [token]="token"></ama-extension>`,
+  template: `
+  <p>connector-editor works with service: {{ message }}!</p>
+  <ama-extension [token]="token"></ama-extension>`,
   styles: [
     `
       :host {
@@ -18,4 +21,9 @@ import { CONNECTOR_EDITOR_UI } from '../../../extension.tokens';
 })
 export class ConnectorEditorComponent {
   token = CONNECTOR_EDITOR_UI;
+  message: string;
+
+  constructor(amaLibService: AmaLibService) {
+    this.message = amaLibService.getValue();
+  }
 }

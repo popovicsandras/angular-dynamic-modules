@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
-// import { CommonModule } from '@angular/common';
-// import * as CoreModule from '@angular/core';
-// import { AmaLibModule } from 'ama-lib';
-
-declare const SystemJS;
+import { Component, Inject } from '@angular/core';
+import { AmaLibService } from 'ama-lib';
+import { AmaLibServiceInLazyModule } from 'lazy-module';
 
 @Component({
-  template: `<p>Dinamically loaded and rewired enterprise-connector-editor works!</p> <app-json-editor></app-json-editor>`,
+  template: `
+  <p>Dinamically loaded and rewired enterprise-connector-editor works with service: {{ message }}!</p>
+  <app-json-editor></app-json-editor>`,
   styles: [
     `
       :host {
@@ -20,23 +19,11 @@ declare const SystemJS;
   ]
 })
 export class EnterpriseConnectorEditorComponent {
-  // constructor(private compiler: Compiler, private parentInjector: Injector) {}
+  message: string;
 
-  // ngOnInit() {
-  //   this.loadSystemJs('./lazy-module/bundles/lazy-module.umd.js').then(module => {
-  //     const moduleFactory = this.compiler.compileModuleSync(module.LazyModuleModule);
-  //     const moduleRef = moduleFactory.create(this.parentInjector);
-  //     const componentClass = module.LazyModuleModule.getEntryComponent();
-
-  //     const resolver = moduleRef.componentFactoryResolver;
-  //     const compFactory = resolver.resolveComponentFactory(componentClass);
-  //   });
-  // }
-
-  // private loadSystemJs(addonPath: string) {
-  //   SystemJS.set('@angular/core', SystemJS.newModule(CoreModule));
-  //   SystemJS.set('@angular/common', SystemJS.newModule(CommonModule));
-  //   SystemJS.set('ama-lib', SystemJS.newModule(AmaLibModule));
-  //   return SystemJS.import(addonPath);
-  // }
+  constructor(amaLibService: AmaLibService, @Inject(AmaLibServiceInLazyModule) karaj: any) {
+    this.message = amaLibService.getValue();
+    /*tslint:disable-next-line*/
+    console.log('karaj: ', karaj);
+  }
 }
