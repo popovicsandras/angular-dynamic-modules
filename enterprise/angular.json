@@ -18,12 +18,15 @@
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
-              "src/favicon.ico"
+              "src/favicon.ico",
+              { "glob": "**/*", "input": "dist/lazy-module", "output": "/lazy-module/" }
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/systemjs/dist/system.js"
+            ]
           },
           "configurations": {
             "production": {

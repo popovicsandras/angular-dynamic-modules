@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppLayoutComponent } from './common/app-layout/app-layout.component';
 import { InAppPageComponent } from './common/in-app-page/in-app-page.component';
 import { ConnectorEditorModule } from './connector-editor/connector-editor.module';
+import { ExtensionFactoryService } from './common/extension/extension-factory.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,9 @@ import { ConnectorEditorModule } from './connector-editor/connector-editor.modul
   exports: [
     BrowserModule,
     AppLayoutComponent
+  ],
+  providers: [
+    ExtensionFactoryService
   ]
 })
 export class AmaLibModule { }

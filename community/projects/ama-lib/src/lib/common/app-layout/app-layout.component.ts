@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ANOTHER_EXTENSION } from '../../extension.tokens';
 
 @Component({
   selector: 'app-root',
-  template: `<p>app-layout works!</p> <app-in-app-page></app-in-app-page>`,
+  template: `<p>app-layout works!</p> <app-in-app-page></app-in-app-page> <ama-extension [token]="token"></ama-extension>`,
   styles: [
     `
       :host {
@@ -14,4 +15,6 @@ import { Component } from '@angular/core';
     `
   ]
 })
-export class AppLayoutComponent {}
+export class AppLayoutComponent {
+  token = ANOTHER_EXTENSION;
+}
