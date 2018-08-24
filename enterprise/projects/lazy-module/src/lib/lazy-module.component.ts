@@ -1,7 +1,6 @@
 import { Component, InjectionToken, Inject } from '@angular/core';
 import { AmaLibService } from 'ama-lib';
-
-export const AmaLibServiceInLazyModule = new InjectionToken<string>('AmaLibServiceInLazyModule');
+import { Injector } from '@angular/core';
 
 @Component({
   selector: 'lazy-lazy-module',
@@ -13,7 +12,8 @@ export const AmaLibServiceInLazyModule = new InjectionToken<string>('AmaLibServi
 export class LazyModuleComponent {
   message = '';
 
-  constructor(@Inject(AmaLibServiceInLazyModule) amaLibService: AmaLibService) {
+  constructor(private injector: Injector) {
+    const amaLibService: AmaLibService = injector.get<any>(<any>'goat');
     this.message = amaLibService.getValue();
   }
 }

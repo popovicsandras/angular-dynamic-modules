@@ -32,17 +32,13 @@ export class ExtensionComponent implements OnInit, OnDestroy {
         private ngModule: NgModuleRef<any>) { }
 
     ngOnInit() {
-      /*tslint:disable-next-line*/
-      console.log('module: ', this.ngModule);
-      /*tslint:disable-next-line*/
-      console.log('equals: ', this.injector === this.ngModule.injector);
         const extension = this.injector.get<string | Type<{}>>(this.token);
         if (extension) {
             const factory$ = this.extensionFactoryService.loadFactory(extension, this.ngModule.injector);
 
             factory$.subscribe((factory) => {
                 this.content.clear();
-                this.componentRef = this.content.createComponent(factory, 0);
+                this.componentRef = this.content.createComponent(factory, 0, this.injector);
             });
         }
     }

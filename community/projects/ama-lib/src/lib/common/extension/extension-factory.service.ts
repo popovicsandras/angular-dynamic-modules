@@ -39,9 +39,6 @@ export class ExtensionFactoryService {
                     moduleRef = moduleFactory.create(parentInjector),
                     componentClass = angularModule.getEntryComponent();
 
-                /*tslint:disable-next-line*/
-                console.log(moduleRef);
-
                 const resolver = moduleRef.componentFactoryResolver;
                 return resolver.resolveComponentFactory(componentClass);
             });

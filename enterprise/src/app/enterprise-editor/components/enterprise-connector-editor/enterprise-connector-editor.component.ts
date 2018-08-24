@@ -1,6 +1,5 @@
 import { Component, Inject } from '@angular/core';
 import { AmaLibService } from 'ama-lib';
-import { AmaLibServiceInLazyModule } from 'lazy-module';
 
 @Component({
   template: `
@@ -21,9 +20,7 @@ import { AmaLibServiceInLazyModule } from 'lazy-module';
 export class EnterpriseConnectorEditorComponent {
   message: string;
 
-  constructor(amaLibService: AmaLibService, @Inject(AmaLibServiceInLazyModule) karaj: any) {
+  constructor(amaLibService: AmaLibService) {
     this.message = amaLibService.getValue();
-    /*tslint:disable-next-line*/
-    console.log('karaj: ', karaj);
   }
 }

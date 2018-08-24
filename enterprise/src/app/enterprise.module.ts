@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AmaLibModule, AppLayoutComponent, ANOTHER_EXTENSION, AmaLibService } from 'ama-lib';
+import { AmaLibModule, ANOTHER_EXTENSION, AmaLibService } from 'ama-lib';
 import { EnterpriseEditorModule } from './enterprise-editor/enterprise-editor.module';
 import { AnotherModuleModule } from './another-module/another-module.module';
-import { AmaLibServiceInLazyModule } from 'lazy-module';
+import { EnterpriseRootComponent } from 'src/app/enterprise-root.component';
 
 declare const SystemJS;
 @NgModule({
-  declarations: [],
+  declarations: [
+    EnterpriseRootComponent
+  ],
   imports: [
     BrowserModule,
     AmaLibModule,
@@ -16,12 +18,8 @@ declare const SystemJS;
   ],
   providers: [
     { provide: ANOTHER_EXTENSION, useValue: './lazy-module/bundles/lazy-module.umd.js#LazyModuleModule' },
-    { provide: AmaLibServiceInLazyModule, useExisting: AmaLibService}
+    { provide: 'goat', useExisting: AmaLibService }
   ],
-  bootstrap: [AppLayoutComponent]
+  bootstrap: [EnterpriseRootComponent]
 })
-export class EnterpriseModule {
-  constructor() {
-    SystemJS.set('ama-lib', SystemJS.newModule(AmaLibModule));
-  }
-}
+export class EnterpriseModule {}
